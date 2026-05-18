@@ -22,7 +22,7 @@ function App() {
   const fetchEmployees = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/employees"
+      "https://employee-backend-4txf.onrender.com/"
     );
 
     setEmployees(res.data);
@@ -50,12 +50,12 @@ function App() {
     };
 
     await axios.post(
-      "http://localhost:5000/api/employees",
+      "https://employee-backend-4txf.onrender.com/api/employees",
       payload
     );
 
     const aiRes = await axios.post(
-      "http://localhost:5000/api/ai/recommend",
+      "https://employee-backend-4txf.onrender.com/api/ai/recommend",
       payload
     );
 
